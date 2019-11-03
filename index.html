@@ -152,27 +152,27 @@
 <h2 id="一、安装要求"><a href="#一、安装要求" class="headerlink" title="一、安装要求"></a>一、安装要求</h2><p>根据官方教程和实践经验，安装前需要准备一下内容<br>1、安装Git<br>2、安装Node.js<br>3、在GitHub中创建新仓库，仓库名称的规则是username.github.io（其中username是GitHub中的用户名）</p>
 <h2 id="二、安装Git和Node-js"><a href="#二、安装Git和Node-js" class="headerlink" title="二、安装Git和Node.js"></a>二、安装Git和Node.js</h2><p>1、下载并安装<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">git</a>,安装过程直接下一步直到安装完成。<br>2、安装Node.js可以去官网下载安装包后直接安装。Hexo文档中建议使用nvs进行安装。nvs可以对Node.js的版本进行管理，所以本文才是nvs的方式安装。</p>
 <p>下载安装<a href="https://github.com/jasongin/nvs/releases/download/v1.5.3/nvs-1.5.3.msi">nvs</a>，在<a href="https://github.com/jasongin/nvs/releases">releases</a>可以看到最新的版本。本文安装时最新版本是1.5.3。<br>安装完成后 命令行打开 输入命令</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvs</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvs</span><br></pre></td></tr></table></figure>
 <p>根据提示安装最新版本，安装完成后，根据提示将node的执行路径添加到path中。</p>
-<h3 id="三、安装Hexo"><a href="#三、安装Hexo" class="headerlink" title="三、安装Hexo"></a>三、安装Hexo</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo</span><br></pre></td></tr></table></figure>
+<h3 id="三、安装Hexo"><a href="#三、安装Hexo" class="headerlink" title="三、安装Hexo"></a>三、安装Hexo</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo</span><br></pre></td></tr></table></figure>
 
 <p>执行下面的命令，测试Hexo是否安装成功</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx hexo</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npx hexo</span><br></pre></td></tr></table></figure>
 
 <h3 id="四、创建博客项目，在本地启动访问"><a href="#四、创建博客项目，在本地启动访问" class="headerlink" title="四、创建博客项目，在本地启动访问"></a>四、创建博客项目，在本地启动访问</h3><p>Hexo安装完成后，执行以下命令来初始化一个Hexo项目,如blog。</p>
 <figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br><span class="line">$ <span class="hljs-built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
 <p>初始化完成后，执行g(generate：生成静态文件),s(server：启动本地服务器)命令</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
 
 <p>访问<a href="http://localhost:4000" target="_blank" rel="noopener">本机博客地址</a>查看效果。</p>
 <h3 id="五、部署和访问"><a href="#五、部署和访问" class="headerlink" title="五、部署和访问"></a>五、部署和访问</h3><p>要上传到GitHub，需要安装hexo-deployer-git，否则会报error deployer not found:git的错误</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
 
 <p>修改_config.yml中的deploy配置如下,repository是GitHub中创建的仓库地址</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/kmaster/kmaster.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>配置完成后，依次执行g,deploy(部署到github)命令</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 
 <p>然后访问GitHub提供的博客地址。我的是<a href="https://kmaster.github.io/" target="_blank" rel="noopener">https://kmaster.github.io/</a> （注意kmaster换成你自己的用户名）</p>
