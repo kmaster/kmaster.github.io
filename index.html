@@ -135,7 +135,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 632 个字)
+                    4 分钟 读完 (大约 648 个字)
                 </span>
                 
                 
@@ -159,9 +159,9 @@
 <p>执行下面的命令，测试Hexo是否安装成功</p>
 <figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx hexo</span><br></pre></td></tr></table></figure>
 
-<h3 id="四、创建博客项目，在本地启动访问"><a href="#四、创建博客项目，在本地启动访问" class="headerlink" title="四、创建博客项目，在本地启动访问"></a>四、创建博客项目，在本地启动访问</h3><p>Hexo安装完成后，执行以下命令来初始化一个Hexo项目,<folder>是目录名，如blog。</folder></p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ <span class="hljs-built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-<p>初始化完成后，执行generate(g),server(s)命令</p>
+<h3 id="四、创建博客项目，在本地启动访问"><a href="#四、创建博客项目，在本地启动访问" class="headerlink" title="四、创建博客项目，在本地启动访问"></a>四、创建博客项目，在本地启动访问</h3><p>Hexo安装完成后，执行以下命令来初始化一个Hexo项目,如blog。</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br><span class="line">$ <span class="hljs-built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>初始化完成后，执行g(generate：生成静态文件),s(server：启动本地服务器)命令</p>
 <figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
 <p>访问<a href="http://localhost:4000" target="_blank" rel="noopener">本机博客地址</a>查看效果。</p>
@@ -171,7 +171,7 @@
 
 <p>修改_config.yml中的deploy配置如下,repository是GitHub中创建的仓库地址</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/kmaster/kmaster.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>配置完成后，依次执行generate,deploy命令</p>
+<p>配置完成后，依次执行g,deploy(部署到github)命令</p>
 <figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 
 
