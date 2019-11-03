@@ -7,15 +7,18 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>blog</title>
+<title>用Hexo和GitHub创建个人博客 - blog</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="blog">
-<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;kmaster&#x2F;index.html">
+    <meta name="description" content="本文给大家演示如何用Hexo创建博客，并部署到GitHub。学一项新技术如Hexo，建议首先查看官方文档，官方文档的内容是最新最全。配合博客中分享出的实践经验少踩坑。两者结合起来就可以顺利学会和使用。 一、安装要求根据官方教程和实践经验，安装前需要准备一下内容1、安装Git2、安装Node.js3、在GitHub中创建新仓库，仓库名称的规则是username.github.io（其中usernam">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用Hexo和GitHub创建个人博客">
+<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;kmaster&#x2F;2019&#x2F;11&#x2F;02&#x2F;frist&#x2F;blog-create&#x2F;index.html">
 <meta property="og:site_name" content="blog">
+<meta property="og:description" content="本文给大家演示如何用Hexo创建博客，并部署到GitHub。学一项新技术如Hexo，建议首先查看官方文档，官方文档的内容是最新最全。配合博客中分享出的实践经验少踩坑。两者结合起来就可以顺利学会和使用。 一、安装要求根据官方教程和实践经验，安装前需要准备一下内容1、安装Git2、安装Node.js3、在GitHub中创建新仓库，仓库名称的规则是username.github.io（其中usernam">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;images&#x2F;og_image.png">
+<meta property="og:updated_time" content="2019-11-03T03:03:20.579Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;github.com&#x2F;images&#x2F;og_image.png">
 
@@ -75,7 +78,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.jpg" alt="blog" height="28">
+                <img src="/images/logo.jpg" alt="用Hexo和GitHub创建个人博客" height="28">
             
             </a>
         </div>
@@ -83,7 +86,7 @@
             
             <div class="navbar-start">
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/">主页</a>
                 
                 <a class="navbar-item"
@@ -122,58 +125,6 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-11-03T03:02:04.202Z">2019-11-03</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 221 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/11/03/frist/blog-use-theme/">安装和使用Hexo主题</a>
-            
-        </h1>
-        <div class="content">
-            <p>本文给大家演示怎么安装和使用Hexo主题。</p>
-<h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><p>1、在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">官网主题模板</a>选一个你喜欢的主题。next是star最多的，我是选的icarus。<br>2、有2个配置文件，一个全局配置文件，一个是主题配置文件</p>
-<h2 id="二、下载主题和修改配置"><a href="#二、下载主题和修改配置" class="headerlink" title="二、下载主题和修改配置"></a>二、下载主题和修改配置</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="hljs-built_in">cd</span> blog</span><br><span class="line">$ <span class="hljs-built_in">cd</span> git <span class="hljs-built_in">clone</span> https://github.com/ppoffice/hexo-theme-icarus.git themes/icarus</span><br></pre></td></tr></table></figure>
-<p>修改全局配置文件（_config.yml），默认是landscape，我们换成icarus</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: icarus</span><br></pre></td></tr></table></figure>
-
-<h3 id="三、生成静态文件，启动本地服务器查看"><a href="#三、生成静态文件，启动本地服务器查看" class="headerlink" title="三、生成静态文件，启动本地服务器查看"></a>三、生成静态文件，启动本地服务器查看</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-<p>访问<a href="http://localhost:4000" target="_blank" rel="noopener">本机博客地址</a>查看效果。</p>
-<h3 id="四、修改主题配置"><a href="#四、修改主题配置" class="headerlink" title="四、修改主题配置"></a>四、修改主题配置</h3><p>将主题配置文件（themes/icarus/_config.yml）中信息换成你自己的</p>
-<p>恭喜你的博客换成全新主题 \^o^/<br><img src="/img/xyjy.jpg" alt></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
 <div class="card">
     
     <div class="card-content article ">
@@ -195,7 +146,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/11/02/frist/blog-create/">用Hexo和GitHub创建个人博客</a>
+                用Hexo和GitHub创建个人博客
             
         </h1>
         <div class="content">
@@ -239,7 +190,19 @@
 
 
 
-
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/11/03/frist/blog-use-theme/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">安装和使用Hexo主题</span>
+            </a>
+        </div>
+        
+        
+    </div>
+</div>
 
 
 </div>
@@ -598,7 +561,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.jpg" alt="blog" height="28">
+                    <img src="/images/logo.jpg" alt="用Hexo和GitHub创建个人博客" height="28">
                 
                 </a>
                 <p class="is-size-7">
